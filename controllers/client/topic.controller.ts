@@ -8,6 +8,7 @@ export const topics = async (req: Request, res: Response) => {
   });
 
   res.render("client/pages/topics/index", {
-    pageTitle: "Chu de bai hat"
+    pageTitle: "Chu de bai hat",
+    topics: topics
   });
 };
