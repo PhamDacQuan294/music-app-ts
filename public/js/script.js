@@ -65,9 +65,10 @@ if(buttonLike) {
 // End Button Like
 
 // Button Favorite
-const buttonFavorite = document.querySelector("[button-favorite]");
-if(buttonFavorite) {
-  buttonFavorite.addEventListener("click", () => {
+const listButtonFavorite = document.querySelectorAll("[button-favorite]");
+if(listButtonFavorite.length > 0) {
+  listButtonFavorite.forEach(( buttonFavorite) => {
+    buttonFavorite.addEventListener("click", () => {
     const idSong = buttonFavorite.getAttribute("button-favorite");
     const isActive = buttonFavorite.classList.contains("active");
 
@@ -86,6 +87,7 @@ if(buttonFavorite) {
           buttonFavorite.classList.toggle("active");
         }
       });
+    });
   });
 }
 // End Button Like
